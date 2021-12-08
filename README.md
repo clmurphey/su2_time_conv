@@ -128,5 +128,5 @@ Run `time_convergence_study.py`. The examples output Paraview `.vtu` files. You 
 - SU2
   - Test Cases
   - [config_template.cfg](https://github.com/su2code/SU2/blob/master/config_template.cfg)
-- SU2's VandV repository (`.cfg` files and [compute_order_of_accuracy.py](https://github.com/su2code/VandV/blob/master/mms/fvm_navierstokes/compute_order_of_accuracy.py) were invaluable resources here
+- SU2's VandV repository `.cfg` files and [compute_order_of_accuracy.py](https://github.com/su2code/VandV/blob/master/mms/fvm_navierstokes/compute_order_of_accuracy.py) were invaluable resources here
 
