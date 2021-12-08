@@ -1,2 +1,4 @@
 # su2_time_conv
-Time Convergence study using SU2
+
+## Time Convergence study using SU2
+
