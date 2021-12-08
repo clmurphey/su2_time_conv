@@ -1,4 +1,4 @@
-# SU2 Time Convergence Study
+# [SU2](https://su2code.github.io/) Time Convergence Study : 2 Examples
 
 
 ## Overview
@@ -36,7 +36,7 @@ Only able to employ Implicit methods in the laminar flat plate flow example due 
 - matplotlib
 
 ### To Run the examples
-Run `time_convergence_study.py`. The examples output Paraview `.vtu` files. 
+Run `time_convergence_study.py`. The examples output Paraview `.vtu` files. You may want to modify the number of processes (nRank) for mpirun. 
 
 
 ## Examples
@@ -58,6 +58,25 @@ Run `time_convergence_study.py`. The examples output Paraview `.vtu` files.
 >   - Time Convergence Field: `RMS_ENERGY`
 
 #### Figures
+|TIME_MARCHING| Figure|
+|-------------|-------|
+|Dual Time Stepping (DTS) - 1st Order |![Dual-1st](https://user-images.githubusercontent.com/37432497/145166661-e5f6dadf-dd91-4641-bd70-cb69d6c7da50.png) |
+|Dual Time Stepping (DTS) - 2nd Order| ![Dual-2nd](https://user-images.githubusercontent.com/37432497/145166680-a6054f73-98e0-418f-84d9-cfbf8aad31f9.png)|
+|Steady State (SST)|![SST](https://user-images.githubusercontent.com/37432497/145166699-a084e3f6-8e58-4f12-98ad-5414fecf02ce.png)|
+| | |
+| Comparison | ![all_unst](https://user-images.githubusercontent.com/37432497/145166734-7e387dbe-8590-49a8-aec7-bd24cdb617f5.png)|
+
+
+- Multiple Time Steps (5 here)
+
+|TIME_MARCHING| Figure|
+|-------------|-------|
+|DTS - 1st Order| ![Dual-1st](https://user-images.githubusercontent.com/37432497/145167788-e85ab424-c954-4f8c-8d4e-9e67ab3c7b86.png) |
+|DTS - 2nd Order|![Dual-2nd](https://user-images.githubusercontent.com/37432497/145167813-141030af-aab7-47a1-8c3e-7855c4605fe7.png) |
+|SST            | ![SST](https://user-images.githubusercontent.com/37432497/145167882-f81cdb30-4f63-4309-b076-820c66a1dcad.png)|
+|               |   |
+| Comparison | ![all_unst](https://user-images.githubusercontent.com/37432497/145167900-8845e475-21bd-4360-abb6-a809f5b20e21.png)|
+
 
 #### Conclusions
 
@@ -95,7 +114,11 @@ Run `time_convergence_study.py`. The examples output Paraview `.vtu` files.
 - Explicit methods converge faster than Implicit Methods (though that might be at the expense of accuracy or computational cost). 
 - JST converges faster than ROE
 
+
+
 ## Future Work
-- Test on more unsteady example problems
-- Estimate the error
-- Implement MMS to verify the solutions (unsteady MMS is not yet available in SU2) 
+- [ ] Test on more unsteady example problems (e.g., incompressible flow, NACA0012, Turbulent Flat Plate).
+- [ ] Try flat plate with non-periodic boundary conditions.
+- [ ] Estimate the error.
+- [ ] Implement MMS to verify the solutions (unsteady MMS is not yet available in SU2).
+- [ ] Increase number of time steps (limited by processing speed on my computer at the moment). 
