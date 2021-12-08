@@ -127,7 +127,7 @@ for j in range(len(fnames)):
             color=colo[j], linewidth=1.5, markersize=9, label=legends[j])
   ax.set_xlabel(result[j].columns.values[2])
   ax.set_ylabel(result[j].columns.values[7])
-  ax.set_title(fnames[j])
+  ax.set_title(legends[j])
   ax.legend(loc="center left", bbox_to_anchor=(.9, 0.5), prop={'size': 6})
   fig.savefig(legends[j]+".png")
 
