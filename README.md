@@ -38,6 +38,7 @@ Only able to employ Implicit methods in the laminar flat plate flow example due 
 ### To Run the examples
 Run `time_convergence_study.py`. The examples output Paraview `.vtu` files. 
 
+
 ## Examples
 
 ### Unsteady Laminar Flow - Flat Plate (with periodic boundary conditions)
@@ -58,6 +59,8 @@ Run `time_convergence_study.py`. The examples output Paraview `.vtu` files.
 
 #### Figures
 
+#### Conclusions
+
 ### Unsteady Navier Stokes Flow over a Cylinder
 <img src="https://user-images.githubusercontent.com/37432497/145163342-9eda0bae-e2b6-42cb-af65-191c81d1895d.png" height="300" />
 
@@ -73,7 +76,24 @@ Run `time_convergence_study.py`. The examples output Paraview `.vtu` files.
 >   - Time Convergence Field: `TAVG_COMBO`
 
 #### Figures
+- JST
 
+![JSTDual-1st](https://user-images.githubusercontent.com/37432497/145165175-8e3b8489-0bfc-4d31-b68a-9f986128ab05.png)
+![JSTDual-2nd](https://user-images.githubusercontent.com/37432497/145165205-6a97d088-b2c5-48a5-870c-664ad8bc3700.png)
+![JST](https://user-images.githubusercontent.com/37432497/145165950-8ad9f05d-f9ca-45bf-a727-1dd9dddd2e25.png)
+
+- ROE
+
+![ROE+WLSDual-1st](https://user-images.githubusercontent.com/37432497/145165229-4f31e0ee-297b-44d1-850e-972d2b9d8d1c.png)
+![ROE+WLSDual-2nd](https://user-images.githubusercontent.com/37432497/145165252-e998184f-0610-4fe2-a6d7-6ae031dac3c3.png)
+![ROE+WLS](https://user-images.githubusercontent.com/37432497/145165924-90adf8c5-3f89-4d39-a8f6-c01be730dae1.png)
+
+ 
+#### Conclusions
+- `TIME_STEPPING` scheme does not appear to care about convergence. Merely attempts one inner iter per time step. 
+- `DUAL_TIME_STEPPING-2ND_ORDER` converges slightly faster than `DUAL_TIME_STEPPING-2ND_ORDER`
+- Explicit methods converge faster than Implicit Methods (though that might be at the expense of accuracy or computational cost). 
+- JST converges faster than ROE
 
 ## Future Work
 - Test on more unsteady example problems
